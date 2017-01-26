@@ -44,20 +44,25 @@
   <ItemGroup>
     <NativeReference Include="..\libs\libCardIO.a">
       <Kind>Static</Kind>
-      <LinkerFlags>-lc++ -ObjC</LinkerFlags>
+      <LinkerFlags></LinkerFlags>
+      <ForceLoad>True</ForceLoad>
     </NativeReference>
     <NativeReference Include="..\libs\libopencv_core.a">
       <Kind>Static</Kind>
-      <LinkerFlags>-lc++ -ObjC</LinkerFlags>
+      <LinkerFlags></LinkerFlags>
+      <ForceLoad>True</ForceLoad>
     </NativeReference>
     <NativeReference Include="..\libs\libopencv_imgproc.a">
       <Kind>Static</Kind>
-      <LinkerFlags>-lc++ -ObjC</LinkerFlags>
+      <LinkerFlags></LinkerFlags>
+      <ForceLoad>True</ForceLoad>
     </NativeReference>
     <NativeReference Include="..\libs\libPayPalMobile.a">
       <Kind>Static</Kind>
-      <SmartLink>False</SmartLink>
       <LinkerFlags>-lc++ -ObjC</LinkerFlags>
+      <ForceLoad>True</ForceLoad>
+      <Frameworks>Accelerate AudioToolbox AVFoundation CoreGraphics CoreLocation CoreMedia CoreVideo Foundation MessageUI MobileCoreServices OpenGLES QuartzCore Security SystemConfiguration UIKit SafariServices</Frameworks>
+      <IsCxx>True</IsCxx>
     </NativeReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.ObjCBinding.CSharp.targets" />
