@@ -4,6 +4,7 @@ This is a Xamarin.iOS binding library for Paypal SDK.
 Last version is available on NuGet: [Xam.Paypal.iOS](https://www.nuget.org/packages/Xam.PayPal.iOS/)
 
 Please see [PayPalSdk for iOS onGitHub](https://github.com/paypal/PayPal-iOS-SDK) for SDK documentation.
+See the demo app for a working example.
 
 
 ## Usage
@@ -13,7 +14,7 @@ Please see [PayPalSdk for iOS onGitHub](https://github.com/paypal/PayPal-iOS-SDK
 		private void SetupPayPal()
 		{
 			// setup your delegate
-			this._myDelegate = new LurchPayPalDelegate()
+			this._myDelegate = new XamPaymentDelegate()
 				.OnCancelDo((controller) =>
 				{
 					// do something on payment cancel
@@ -62,6 +63,39 @@ Now you can go with payment:
 	    this.PresentViewController(paymentViewController, true, null);
 	}
 
+#Paypal Delegate
+This package will expose a simple PayPalDelegate called *XamPaymentDelegate*.  You can create your own delegate if you need it in a way like this:
+
+	public class XamPaymentDelegate : PayPalPaymentDelegate
+	{
+
+		private Action<PayPalPaymentViewController> _onCancel;
+		private Action<PayPalPaymentViewController, PayPalPayment> _onComplete;
+
+
+		public XamPaymentDelegate OnCompleteDo(Action<PayPalPaymentViewController, PayPalPayment> onComplete)
+		{
+			this._onComplete = onComplete;
+			return this;
+		}
+
+		public XamPaymentDelegate OnCancelDo(Action<PayPalPaymentViewController> onCancel)
+		{
+			this._onCancel = onCancel;
+			return this;
+		}
+
+
+		public override void PayPalPaymentDidCancel(PayPalPaymentViewController paymentViewController)
+		{
+			this._onCancel?.Invoke(paymentViewController);
+		}
+
+		public override void PayPalPaymentViewController(PayPalPaymentViewController paymentViewController, PayPalPayment completedPayment)
+		{
+			this._onComplete?.Invoke(paymentViewController, completedPayment);
+		}
+	}
 
 
 ##Note about versioning##
