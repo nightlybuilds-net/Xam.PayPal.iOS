@@ -1,7 +1,7 @@
 # Xamarin iOS PayPal binding library
 
 This is a Xamarin.iOS binding library for Paypal SDK.   
-Last version is available on NuGet: [todo](https://www.google.it/)
+Last version is available on NuGet: [Xam.Paypal.iOS](https://www.nuget.org/packages/Xam.PayPal.iOS/)
 
 Please see [PayPalSdk for iOS onGitHub](https://github.com/paypal/PayPal-iOS-SDK) for SDK documentation.
 
