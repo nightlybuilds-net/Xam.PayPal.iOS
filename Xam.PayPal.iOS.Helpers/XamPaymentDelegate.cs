@@ -5,20 +5,20 @@ using UIKit;
 namespace Xam.PayPal.iOS.Demo
 {
 
-	class MyPaymentDelegate : PayPalPaymentDelegate
+	public class XamPaymentDelegate : PayPalPaymentDelegate
 	{
 
 		private Action<PayPalPaymentViewController> _onCancel;
 		private Action<PayPalPaymentViewController, PayPalPayment> _onComplete;
 
 
-		public MyPaymentDelegate OnCompleteDo(Action<PayPalPaymentViewController, PayPalPayment> onComplete)
+		public XamPaymentDelegate OnCompleteDo(Action<PayPalPaymentViewController, PayPalPayment> onComplete)
 		{
 			this._onComplete = onComplete;
 			return this;
 		}
 
-		public MyPaymentDelegate OnCancelDo(Action<PayPalPaymentViewController> onCancel)
+		public XamPaymentDelegate OnCancelDo(Action<PayPalPaymentViewController> onCancel)
 		{
 			this._onCancel = onCancel;
 			return this;
