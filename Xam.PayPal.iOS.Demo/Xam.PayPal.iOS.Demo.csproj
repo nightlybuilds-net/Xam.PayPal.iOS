@@ -117,7 +117,12 @@
     <Compile Include="ViewController.designer.cs">
       <DependentUpon>ViewController.cs</DependentUpon>
     </Compile>
-    <Compile Include="MyPaymentDelegate.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Xam.PayPal.iOS.Helpers\Xam.PayPal.iOS.Helpers.csproj">
+      <Project>{22C64C59-ABD7-4758-A5F3-A2088A5A3AE2}</Project>
+      <Name>Xam.PayPal.iOS.Helpers</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

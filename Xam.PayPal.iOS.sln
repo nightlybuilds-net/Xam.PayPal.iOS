@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xam.PayPal.iOS.Demo", "Xam.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xam.PayPal.iOS", "Xam.PayPal.iOS\Xam.PayPal.iOS.csproj", "{DBEA2C87-DD19-4D15-A750-3D233CEC5B8B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xam.PayPal.iOS.Helpers", "Xam.PayPal.iOS.Helpers\Xam.PayPal.iOS.Helpers.csproj", "{22C64C59-ABD7-4758-A5F3-A2088A5A3AE2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|iPhoneSimulator = Debug|iPhoneSimulator
@@ -29,5 +31,13 @@ Global
 		{DBEA2C87-DD19-4D15-A750-3D233CEC5B8B}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{DBEA2C87-DD19-4D15-A750-3D233CEC5B8B}.Debug|iPhone.ActiveCfg = Debug|Any CPU
 		{DBEA2C87-DD19-4D15-A750-3D233CEC5B8B}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{22C64C59-ABD7-4758-A5F3-A2088A5A3AE2}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{22C64C59-ABD7-4758-A5F3-A2088A5A3AE2}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{22C64C59-ABD7-4758-A5F3-A2088A5A3AE2}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{22C64C59-ABD7-4758-A5F3-A2088A5A3AE2}.Release|iPhone.Build.0 = Release|Any CPU
+		{22C64C59-ABD7-4758-A5F3-A2088A5A3AE2}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{22C64C59-ABD7-4758-A5F3-A2088A5A3AE2}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{22C64C59-ABD7-4758-A5F3-A2088A5A3AE2}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{22C64C59-ABD7-4758-A5F3-A2088A5A3AE2}.Debug|iPhone.Build.0 = Debug|Any CPU
 	EndGlobalSection
 EndGlobal

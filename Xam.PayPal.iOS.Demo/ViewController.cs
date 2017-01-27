@@ -7,9 +7,9 @@ namespace Xam.PayPal.iOS.Demo
 	public partial class ViewController : UIViewController
 	{
 		// USE YOUR CLIENT ID HERE
-		private const string CLIENTID = "AYaP1kdIcz2maWEmebyohxNCMYkCCsLDsYH5xcufnr4fv4cw_uAKITOhtYPPqXpM7ASGlcpPTXBsDDX2";
+		private const string CLIENTID = "YOUR_CLIENT_ID_HERE";
 		private PayPalConfiguration _payPalConfig;
-		private MyPaymentDelegate _myDelegate;
+		private XamPaymentDelegate _myDelegate;
 
 		protected ViewController(IntPtr handle) : base(handle)
 		{
@@ -29,7 +29,7 @@ namespace Xam.PayPal.iOS.Demo
 			base.ViewDidLoad();
 
 			// setup your delegate
-			this._myDelegate = new MyPaymentDelegate()
+			this._myDelegate = new XamPaymentDelegate()
 				.OnCancelDo((controller) => 
 				{
 					this.ResultLbl.Hidden = false;
